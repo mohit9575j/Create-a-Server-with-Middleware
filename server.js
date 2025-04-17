@@ -1,18 +1,13 @@
 // server.js
 import express from 'express';
-import userRoutes from './routes/userRoutes.js';
-import productRoutes from './routes/productRoutes.js';
-import cartRoutes from './routes/cartRoutes.js';
-
+ import productrouter from './routes/productRoutes.js';
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 
 // Routes
-app.use('/users', userRoutes);
-app.use('/products', productRoutes);
-app.use('/cart', cartRoutes);
+ app.use('/products',productrouter)
 
 // Start server
 app.listen(PORT, () => {
